@@ -41,8 +41,6 @@ class AgentCreateView(OrganisorAndLoginRequiredMixin, generic.CreateView):
             from_email="admin@test.com",
             recipient_list=[user.email]
         )
-        # agent.organisation = self.request.user.userprofile
-        # agent.save()
         return super(AgentCreateView, self).form_valid(form)
 
     # def form_valid(self, form):
